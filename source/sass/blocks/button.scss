@@ -12,10 +12,21 @@
   line-height: 15px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  cursor: pointer
 }
 
 @media (min-width: $tablet-width) {
   .button {
     width: 275px;
+
+    &:hover {
+      background-color: rgba($color: #8C0014, $alpha: 0.8);
+      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: 0.3s;
+    }
+
+    &:active {
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
   }
 }

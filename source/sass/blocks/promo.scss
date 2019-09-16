@@ -51,6 +51,7 @@
   line-height: 16px;
   text-transform: uppercase;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {
@@ -74,6 +75,17 @@
     font-weight: normal;
     font-size: 16px;
     color: $white;
+  }
+
+  .promo__button {
+    &:hover{
+      background-color: $white;
+      color: #8C0014;
+      transition: 0.4s;
+    }
+    &:active {
+      opacity: 0.7;
+    }
   }
 
 }
