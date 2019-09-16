@@ -1,0 +1,51 @@
+.review {
+  margin: 0;
+  padding: 0;
+}
+
+.review__text {
+  position: relative;
+  margin: 0;
+  padding: 10px 12px 10px 20px;
+
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  &::before {
+    @include pseudo(15px, 13px);
+    top: 0;
+    left: 0;
+    background-image: url('../img/quote.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &::after{
+    @include pseudo(15px, 13px);
+    bottom: 0;
+    right: 0;
+    background-image: url('../img/quote.svg');
+    transform: rotate(180deg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.review__author {
+  text-align: center;
+  margin-top: 20px;
+
+  font-weight: bold;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .review__author {
+    text-align: right;
+    margin: 0;
+    padding-right: 30px;
+  }
+}

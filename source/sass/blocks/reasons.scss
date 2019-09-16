@@ -1,0 +1,94 @@
+.reasons__wrapper {
+  @include flex-mobile;
+}
+
+.reasons__title{
+  margin: 0;
+  color: black;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+}
+
+.reasons__list {
+  @include list-reducer;
+
+  margin-top: 25px;
+}
+
+.reasons__item {
+  @include flex-mobile;
+
+  position: relative;
+  align-items: flex-start;
+  padding-left: 60px;
+  
+  &::before {
+    @include pseudo(44px, 44px);
+    top: 0;
+    left: 0;
+    border: 1px solid $border-color;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &:first-of-type::before {
+    background-image: url('../img/icon_shield.svg');
+    background-size: 20px 23px;
+  }
+  &:nth-of-type(2)::before {
+    background-image: url('../img/icon_gear.svg');
+    background-size: 22px 22px;
+  }
+  &:nth-of-type(3)::before {
+    background-image: url('../img/icon_ruble.svg');
+    background-size: 10px 17px;
+  }
+}
+
+.reasons__text {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 16px;
+  color: black;
+  font-size: 16px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: $tablet-width) {
+
+  .reasons__wrapper {
+    padding-right: 350px;
+  }
+
+  .reasons__title {
+    align-self: flex-start;
+  }
+
+  .reasons__item {
+    padding-left: 68px;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+    }
+    &:first-of-type::before {
+      background-size: 22px 26px;
+    }
+    &:nth-of-type(2)::before {
+      background-size: 24px 24px;
+    }
+    &:nth-of-type(3)::before {
+      background-size: 12px 19px;
+    }
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .reasons__wrapper {
+    padding-right: 420px;
+    padding-top: 62px;
+    padding-bottom: 60px;
+  }
+}

@@ -1,0 +1,10 @@
+.main__wrapper {
+  position: relative;
+}
+
+@media (min-width: $min-desktop-width) {
+  .main__wrapper {
+    max-width: $wrapper-width;
+    margin: 0 auto;
+  }
+}

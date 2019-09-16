@@ -1,0 +1,69 @@
+.order {
+  margin-top: -105px;
+}
+
+.order form {
+  @include flex-mobile;
+  @include shadowed-element;
+  width: 290px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+.order label {
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+.order p {
+  margin: 0;
+  text-align: center;
+  color: #000000;
+
+  &:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  &:last-of-type {
+    margin-top: 3px;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+  }
+}
+
+.order button {
+  width: 100%;
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) { 
+  .order {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    margin-top: -30px;
+  }
+
+  .order label {
+    max-width: 275px;
+  }
+
+  .order .button {
+    max-width: 275px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .order {
+    margin-top: -65px;
+  }
+
+  .order form {
+    padding: 39px 30px 47px 30px;
+    width: 376px;
+  }
+}

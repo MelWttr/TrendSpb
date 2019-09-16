@@ -1,0 +1,101 @@
+
+.request form {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 35px;
+    padding-bottom: 25px;
+}
+
+.request span {
+    position: relative;
+  
+    display: inline-block;
+    vertical-align: middle;
+    width: 11px;
+    height: 11px;
+    margin-top: -3px;
+  
+    border: 1px solid $border-color;
+    border-radius: 2px;
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: none;
+      margin-left: -3px;
+      margin-top: -2.5px;
+      width: 6px;
+      height: 3px;
+  
+      border-left: 1px solid $black;
+      border-bottom: 1px solid $black;
+  
+      transform: rotate(-45deg);
+    }
+  }
+  
+  input:checked + span::before {
+    display: block;
+  }
+
+.request .button {
+    margin: 25px auto;
+}
+
+@media (min-width: $tablet-width) {
+    .request form {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        
+        max-width: $wrapper-width;
+        padding-left: $tablet-padding;
+        padding-right: $tablet-padding;
+        padding-bottom: 50px;
+    }
+
+    .request .button {
+        margin: 0;
+        margin-top: 25px;
+        margin-right: 20px;
+        width: 30%;
+    }
+
+    .request h2 {
+        width: 100%;
+        text-align: center;
+      }
+    
+    .request label {
+        width: 30%;
+        margin-right: 20px;
+    
+        &:nth-of-type(4) {
+          width: 63%;
+          max-width: 733px;
+        }
+    
+        &:nth-of-type(4) textarea {
+          min-height: auto;
+          height: 42px;
+        }
+    
+        &:last-of-type {
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+        }
+      }
+}
+
+
+@media (min-width: 1110px) {
+  .request label {
+    &:nth-of-type(4) {
+      width: 62%;
+    }
+  }
+}

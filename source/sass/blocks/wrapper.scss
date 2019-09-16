@@ -1,0 +1,11 @@
+.wrapper {
+  margin: 0 auto;
+  min-width: $mobile-width;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--main {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+}

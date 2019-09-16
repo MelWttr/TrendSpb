@@ -1,0 +1,36 @@
+.footer {
+  background-color: $black;
+}
+
+.footer__wrapper {
+  @include flex-mobile;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.footer__text {
+  margin: 0;
+  padding: 0;
+
+  font-size: 13px;
+  line-height: 15px;
+  color: #797979;
+
+  &:last-of-type{
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: $tablet-padding;
+    padding-left: $tablet-padding;
+    max-width: 1230px;
+  }
+
+  .footer__text {
+    font-size: 14px;
+  }
+}

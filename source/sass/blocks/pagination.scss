@@ -1,0 +1,27 @@
+.pagination {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    @include list-reducer;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+
+  .pagination__item:not(:last-of-type) {
+    margin-right: 11px;
+  }
+
+  .pagination__link {
+    font-size: 16px;
+    color: $white;
+    cursor: pointer;
+
+    &--selected {
+      font-weight: bold;
+      font-size: 36px;
+    }
+  }
+}

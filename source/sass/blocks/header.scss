@@ -1,0 +1,36 @@
+.header {
+  background-color: rgba(55, 52, 49, 1);
+  background-image: url('../img/header_mobile@1x.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #F8F6F6;
+
+  @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url('../img/header_mobile@2x.jpg');
+      background-size: 320px auto;
+    }
+}
+
+.header__wrapper {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    background-image: url('../img/header_desktop@1x.jpg');
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url('../img/header_mobile@2x.jpg');
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    background-size: 1900px auto;
+  }
+}

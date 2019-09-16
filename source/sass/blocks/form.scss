@@ -1,0 +1,48 @@
+form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+form label {
+  width: 100%;
+
+  &:nth-of-type(4) textarea {
+    min-height: 108px;
+  }
+
+  &:last-of-type {
+    margin-top: 25px;
+    color: #797979;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 25px;
+
+  background-color: $background-color;
+  border: 1px solid $border-color;
+  border-radius: 2px;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+
+  color: #000000;
+}
+
+form .button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+ 
+}
