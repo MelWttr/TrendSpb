@@ -12,9 +12,9 @@
   var animationOutName = "";
 
   var reviewBtnClickHandler = (evt) => {
-    var activeReview = reviewsContainer.querySelector(".review--active");
-    var index = reviewsArray.indexOf(activeReview);
-    var newActiveReview;
+    let activeReview = reviewsContainer.querySelector(".review--active");
+    let index = reviewsArray.indexOf(activeReview);
+    let newActiveReview;
     paginationButtons[index].classList.remove("pagination__button--selected");
     if (evt.target.classList.contains("reviews__button--right")) {
       if (index === reviews.length - 1) {
@@ -41,10 +41,10 @@
   reviewBtnLeft.addEventListener("click", reviewBtnClickHandler);
 
   var paginationBtnClick = function (paginationBtn, reviewItem) {
-    var paginationBtnClickHandler = () => {
+    let paginationBtnClickHandler = () => {
       if (!paginationBtn.classList.contains("pagination__button--selected")) {
-        var activeReview = document.querySelector(".review--active");
-        var selectedButton = document.querySelector(".pagination__button--selected");
+        let activeReview = document.querySelector(".review--active");
+        let selectedButton = document.querySelector(".pagination__button--selected");
         if (+selectedButton.dataset.id > +paginationBtn.dataset.id) {
           animationInName = "fadeInLeft";
           animationOutName = "fadeOutRight";
@@ -61,7 +61,7 @@
   };
 
   var animationFinisher = function (oldReview, newReview, animationIn, animationOut) {
-    var animationEndHandler = () => {
+    let animationEndHandler = () => {
       oldReview.classList.remove("review--active", animationOut);
       newReview.classList.add("review--active", animationIn);
       newReview.addEventListener("animationend", () => {
@@ -73,7 +73,7 @@
     oldReview.addEventListener("animationend", animationEndHandler);
   };
 
-  for (var i = 0; i < paginationButtons.length; i++) {
+  for (let i = 0; i < paginationButtons.length; i++) {
     paginationBtnClick(paginationButtons[i], reviews[i]);
   }
 
