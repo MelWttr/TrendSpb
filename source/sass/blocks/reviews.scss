@@ -16,6 +16,10 @@
 
 .reviews__wrapper {
   padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 565px;
+  position: relative;
 }
 
 .reviews__title {
@@ -23,7 +27,81 @@
   margin-bottom: 20px;
 }
 
-@media (min-width: $tablet-width) {
+.reviews__button {
+  position: absolute;
+  top: 50%;
+  margin-top: -21px;
+  padding: 10px;
+  width: 40px;
+  height: 42px;
+
+  border: none;
+  background: none;
+  font-size: 0;
+  opacity: 0.7;
+
+  &--right {
+    right: 0;
+  }
+
+  &--right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20px;
+
+    height: 23px;
+    width: 2px;
+
+    transform: rotate(-30deg);
+    background-color: $white;
+  }
+
+  &--right::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+
+    height: 23px;
+    width: 2px;
+
+    transform: rotate(30deg);
+    background-color: $white;
+  }
+
+  &--left {
+    left: 0;
+  }
+
+  &--left::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+
+    height: 23px;
+    width: 2px;
+
+    transform: rotate(30deg);
+    background-color: $white;
+  }
+
+  &--left::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+
+    height: 23px;
+    width: 2px;
+
+    transform: rotate(-30deg);
+    background-color: $white;
+  }
+}
+
+@media (min-width: 321px) {
   .reviews {
     background-image: url('../img/review_desktop@1x.jpg');
     background-size: cover;
@@ -33,10 +111,42 @@
         background-image: url('../img/review_desktop@2x.jpg');
     }
   }
+}
+
+@media (min-width: 400px) {
+  .reviews__wrapper {
+    min-height: 450px; 
+  }
+}
+
+@media (min-width: 600px) {
+  .reviews__wrapper {
+    min-height: 350px; 
+  }
+}
+
+@media (min-width: $tablet-width) {
 
   .reviews__wrapper {
+    position: relative;
+    min-height: 158px;
     padding-left: 30px;
     padding-right: 30px;
     max-width: 1030px;
+    overflow: hidden;
+  }
+
+  .reviews__title {
+    margin-bottom: 138px;
+  }
+
+  .reviews__button {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    background-size: 1900px auto;
   }
 }

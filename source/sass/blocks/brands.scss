@@ -6,6 +6,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
 }
+
 .brands__item {
   margin-top: -1px;
   margin-left: -1px;
@@ -31,11 +32,6 @@
   .brands__title {
     padding-left: 30px;
     text-align: left;
-  }
-
-  .brands__item {
-    margin: 0;
-    border: none;
   }
 
   .brands__item img {

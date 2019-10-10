@@ -1,0 +1,53 @@
+.popup {
+  max-width: 290px;
+  position: relative;
+  margin-top: 100px;
+  z-index: 15;
+}
+
+.popup__button[type=button] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+
+  font-size: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  &::before {
+    @include pseudo(2px, 16px);
+    top: 0;
+    left: 7px;
+    background-color: $black;
+    transform: rotate(45deg);
+
+  }
+
+  &::after {
+    @include pseudo(2px, 16px);
+    top: 0;
+    right: 7px;
+    background-color: $black;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .popup {
+    max-width: 376px;
+  }
+  .popup form {
+    width: 376px;
+  }
+}
+
+@media (min-width: $min-desktop-width) {
+  .popup form {
+    padding: 30px 15px;
+  }
+}

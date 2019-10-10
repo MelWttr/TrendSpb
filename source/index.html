@@ -9,6 +9,7 @@
     href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,900&display=swap&subset=cyrillic"
     rel="stylesheet">
   <link href="css/style_min.css" rel="stylesheet">
+  <link rel="icon" href="data:,">
 </head>
 
 <body>
@@ -25,12 +26,12 @@
           </button>
         </div>
         <ul class="navigation__list">
-          <li class="navigation__item"><a href="#" class="navigation__link">Главная</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">О нас</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Услуги</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Акции</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Контакты</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">Прайс-лист</a></li>
+          <li class="navigation__item"><a href="index.html" class="navigation__link">Главная</a></li>
+          <li class="navigation__item"><a href="/#reasons" class="navigation__link">О нас</a></li>
+          <li class="navigation__item"><a href="/#reviews" class="navigation__link">Отзывы</a></li>
+          <li class="navigation__item"><a href="/#questions" class="navigation__link">Вопросы</a></li>
+          <li class="navigation__item"><a href="/#map" class="navigation__link">Контакты</a></li>
+          <li class="navigation__item"><a href="/#prices" class="navigation__link">Прайс-лист</a></li>
           <li class="navigation__item navigation__item--call">
             <p>8 (812) 345 67 90</p>
             <a class="navigation__link navigation__link--call" href="#">Заказать звонок</a>
@@ -59,14 +60,16 @@
         <form action="#">
           <p>Хотите узнать причину поломки?</p>
           <p>Закажите бесплатную диагностику!</p>
-          <label><input type="text" placeholder="Ваше имя" required></label>
-          <label><input type="tel" placeholder="Номер телефона" required></label>
+          <label><input type="text" placeholder="Ваше имя*" minlength="2" maxlength="20" pattern="[A-Za-zА-Яа-яЁё ]*"
+              required></label>
+          <label><input type="tel" placeholder="Номер телефона*" pattern="[0-9]*" minlength="5" maxlength="40"
+              required></label>
           <label><textarea type="text" cols="10" rows="6" placeholder="Сообщение"></label>
               <button class="button button--red" type="submit">Заказать диагностику</button>
             </form>
           </section>
       
-          <section class="reasons">
+          <section class="reasons" id="reasons">
             <div class="reasons__wrapper wrapper wrapper--main">
               <h2 class="reasons__title title">Почему мы?</h2>
               <ul class="reasons__list">
@@ -89,7 +92,7 @@
             </div>
           </section>
     </div>
-    <section class="price-list">
+    <section class="price-list" id="prices">
       <div class="price-list__wrapper wrapper wrapper--main">
         <h2 class="price-list__title title">Основные&nbspнеисправности и стоимость работ</h2>
         <table class="price-list__table">
@@ -146,27 +149,49 @@
             <td>от 1200 руб.</td>
           </tr>
         </table>
-        <a href="#" class="price-list__button button">Вызвать мастера</a>
+        <button class="price-list__button button">Вызвать мастера</button>
       </div>
     </section>
-    <section class="reviews">
+    <section class="reviews" id="reviews">
       <div class="reviews__wrapper wrapper wrapper--main">
         <h2 class="reviews__title title">Отзывы наших клиентов</h2>
-        <article class="review">
+        <button class="reviews__button reviews__button--right">Вперед</button>
+        <button class="reviews__button reviews__button--left">Назад</button>
+        <article class="review review--active">
           <h2 class="review__title visually-hidden">Отзыв</h2>
-          <p class="review__text">Понадобилась срочная уборка, так как собирались приехать родственники. Нашел в поисковике фирму, позвонил. Ответили сразу. Сначала сказали, что не могут выслать бригаду, потом попросили повисеть на линии, сказали, что приедут. Приехали за полчаса, хотя были пробки, судя по Яндекс.Картам. Быстро все убрали: протерли пыль, отмыли фасады шкафа, пропылесосили, пятно с ковра удалили, помыли полы. Справились за 1,5 часа. Работой и в целом отношением сотрудников доволен, но вот собранный мусор они не забрали с собой, а в мусорное ведро положили.</p>
+          <p class="review__text">Работаем с компанией уже 2 года. За это время несколько раз ломались холодильники для вина. Обратившись в эту компанию, мы ни разу не пожалели, потому, что там работают настоящие профессионалы. Будем сотрудничать дальше.</p>
           <address class="review__author">Оксана Николаевна</address>
         </article>
+        <article class="review">
+          <h2 class="review__title visually-hidden">Отзыв</h2>
+          <p class="review__text">Винный шкаф Liebherr начал повышать температуру и подавать звуковой сигнал. Позвонил в это сервис. Быстро приехали,грамотно провели диагностику и установили поломку. Вышел из строя вентилятор. Заказали деталь из Европы и она пришла довольно быстро(думал будет дольше). Мастер при мне распаковал запчасть и установил. В итоге винный шкаф работает как прежде. Спасибо за оперативность.</p>
+          <address class="review__author">Геннадий андреевич</address>
+        </article>
+        <article class="review">
+          <h2 class="review__title visually-hidden">Отзыв</h2>
+          <p class="review__text">Перед Новым годом случилась неприятность-сломалась винотека. Честно говоря, в такой ситуации растерялась и не знала куда звонить. Оказывается есть сервисный центр, который занимается именно винными шкафами. В итоге все поломки остались в старом году и праздник мы отмечали с вином, охлажденным в исправном шкафу.</p>
+          <address class="review__author">Елена</address>
+        </article>
+        <article class="review">
+          <h2 class="review__title visually-hidden">Отзыв</h2>
+          <p class="review__text">Хороший сервисный центр. Смогли “оживить” мой винный шкаф Miele. Как оказалось, там случилась утечка фреона. Ребята работали вдвоем, разобрали прибор чуть ли не на молекулы, запаяли место утечки и заправили новый фреон. В общем, работу провели очень серьезную, но все сделано профессионально, аккуратно и все после себя убрали.</p>
+          <address class="review__author">Любовь Ивановна</address>
+        </article>
+        <article class="review">
+          <h2 class="review__title visually-hidden">Отзыв</h2>
+          <p class="review__text">До этого я обращался в другую компанию, где меня, мягко говоря, хотели обмануть, объявив за ремонт очень большую сумму. Позвонив сюда, я долго сомневался, опасаясь опять напороться на “разводил”, но был приятно удивлен. Не скажу, что очень дешево. Цена средняя по рынку, но результат хороший. Винный шкаф отремонтирован..</p>
+          <address class="review__author">Олег Виноградов</address>
+        </article>
         <ul class="pagination">
-          <li class="pagination__item"><a href="#" class="pagination__link">01</a></li>
-          <li class="pagination__item"><a href="#" class="pagination__link">02</a></li>
-          <li class="pagination__item"><a href="#" class="pagination__link pagination__link--selected">03</a></li>
-          <li class="pagination__item"><a href="#" class="pagination__link">04</a></li>
-          <li class="pagination__item"><a href="#" class="pagination__link">05</a></li>
+          <li class="pagination__item"><button class="pagination__button pagination__button--selected" data-id="1"></button></li>
+          <li class="pagination__item"><button class="pagination__button" data-id="2"></button></li>
+          <li class="pagination__item"><button class="pagination__button" data-id="3"></button></li>
+          <li class="pagination__item"><button class="pagination__button" data-id="4"></button></li>
+          <li class="pagination__item"><button class="pagination__button" data-id="5"></button></li>
         </ul>
       </div>
     </section>
-    <section class="brands">
+    <section class="brands"></section>
       <div class="brands__wrapper wrapper wrapper--main">
         <h2 class="brands__title title">Бренды, с которыми мы работаем</h2>
         <ul class="brands__list">
@@ -358,7 +383,7 @@
                     srcset="img/dometic_mobile@1x.webp 1x, img/dometic_desktop@1x.webp 2x">
         
                   <source media="(min-width: 768px)" srcset="img/dometic_desktop@1x.png 1x, img/dometic_desktop@2x.png 2x">
-                  <img src="img/dometic_mobile@1x.png" srcset="img/dometic_mobidesktop@1x 2x"
+                  <img src="img/dometic_mobile@1x.png" srcset="img/dometic_desktop@1x.png 2x"
                     alt="логотип dometic">
                 </picture>
           </li>
@@ -366,7 +391,7 @@
       </div>
     </section>
 
-    <section class="questions">
+    <section class="questions" id="questions">
       <div class="questions__wrapper wrapper wrapper--main">
         <h2 class="questions__title title">Ответы на частые вопросы</h2>
         <ol class="questions__list">
@@ -387,7 +412,7 @@
             <p class="questions__text">Ремонт проводить рентабельно всегда. Раньше технику собирали с запасом на хорошую ремонтопригодность в будущем. Сейчас производители бытовой техники среднего ценового сегмента зачастую устанавливают запчасти заведомо низкого качества, вместо хороших деталей, которые использовались в моделях постарше. Наши инженеры при ремонте подбирают фирменные запчасти высокого уровня надежности, тем самым увеличивая срок службы бытовой техники.</p>
           </li>
           <li class="questions__item">
-            <h3 class="questions__question questions__question--active">В каких случаях проводить ремонт нерентабельно, и проще купить новую технику?</h3>
+            <h3 class="questions__question">В каких случаях проводить ремонт нерентабельно, и проще купить новую технику?</h3>
             <p class="questions__text">Ремонт проводить рентабельно всегда. Раньше технику собирали с запасом на хорошую ремонтопригодность в будущем. Сейчас производители бытовой техники среднего ценового сегмента зачастую устанавливают запчасти заведомо низкого качества, вместо хороших деталей, которые использовались в моделях постарше. Наши инженеры при ремонте подбирают фирменные запчасти высокого уровня надежности, тем самым увеличивая срок службы бытовой техники.</p>
           </li>
           <li class="questions__item">
@@ -395,15 +420,15 @@
             <p class="questions__text">Ремонт проводить рентабельно всегда. Раньше технику собирали с запасом на хорошую ремонтопригодность в будущем. Сейчас производители бытовой техники среднего ценового сегмента зачастую устанавливают запчасти заведомо низкого качества, вместо хороших деталей, которые использовались в моделях постарше. Наши инженеры при ремонте подбирают фирменные запчасти высокого уровня надежности, тем самым увеличивая срок службы бытовой техники.</p>
           </li>
         </ol>
-        <a href="#" class="questions__button button button--red">Задать вопрос</a>
+        <button class="questions__button button button--red">Задать вопрос</button>
       </div>
     </section>
 
     <section class="request">
       <form action="#">
         <h2 class="title">Оставьте заявку и мы вам перезвоним!</h2>
-        <label><input type="text" placeholder="Ваше имя" required></label>
-        <label><input type="tel" placeholder="Телефонный номер" required></label>
+        <label><input id="input" type="text" placeholder="Ваше имя*" minlength="2" maxlength="20" pattern="[A-Za-zА-Яа-яЁё ]*" required></label>
+        <label><input type="tel" placeholder="Телефонный номер*" minlength="5" maxlength="40" pattern="[0-9]*" required></label>
         <label><input type="text" placeholder="Производитель"></label>
         <label><textarea type="text" placeholder="Опишите поломку"></label>
         <button class="button button--red" type="submit">Отправить заявку</button>
@@ -415,7 +440,7 @@
       </form>
     </section>
 
-    <section class="map">
+    <section class="map" id="map">
       <div class="map__wrapper">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500.0233464754849!2d30.328911710848306!3d59.91399748107724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630516e0fe117%3A0x4643418d770b5d1!2z0JzQvtC20LDQudGB0LrQsNGPINGD0LsuLCA0MSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MDAxMw!5e0!3m2!1sru!2sru!4v1568116010983!5m2!1sru!2sru"></iframe>
       </div>
@@ -451,7 +476,52 @@
       <p class="footer__text">Создание сайта - Trendspb</p>
     </div>
   </footer>
+
+  <section class="modal modal--order hidden">
+    <div class="popup popup--master order">
+      <button type="button" class="popup__button">Закрыть окно</button>
+      <form action="#">
+        <p>Хотите узнать причину поломки?</p>
+        <p>Закажите бесплатную диагностику!</p>
+        <label><input type="text" placeholder="Ваше имя*" pattern="[A-Za-zА-Яа-яЁё ]*" maxlength="20" minlength="2" required></label>
+        <label><input type="tel" placeholder="Номер телефона*" pattern="[0-9]*" minlength="5" maxlength="40" required></label>
+        <label><textarea type="text" cols="10" rows="6" placeholder="Сообщение"></label>
+            <button class="button button--red" type="submit">Заказать диагностику</button>
+        </form>
+    </div>
+    <div class="modal__overlay modal__overlay--question"></div>
+  </section>
+
+  <section class="modal modal--question hidden">
+    <div class="popup popup--master order">
+      <button type="button" class="popup__button">Закрыть окно</button>
+      <form action="#">
+        <p>Хотите узнать причину поломки?</p>
+        <p>Задайте нам вопрос!</p>
+        <label><input type="text" placeholder="Ваше имя" pattern="[A-Za-zА-Яа-яЁё ]*" minlength="2" maxlength="20"></label>
+        <label><input type="tel" placeholder="Номер телефона*" pattern="[0-9]*" minlength="5" maxlength="40" required></label>
+        <label><textarea type="text" cols="10" rows="6" placeholder="Ваш вопрос*" required></label>
+            <button class="button button--red" type="submit">Задать вопрос</button>
+        </form>
+    </div>
+    <div class="modal__overlay modal__overlay--question"></div>
+  </section>
+
+  <section class="modal modal--callback hidden">
+    <div class="popup popup--master order">
+      <button type="button" class="popup__button">Закрыть окно</button>
+      <form action="#">
+        <p>Укажите телефон</p>
+        <p>и мы перезвоним в течение 2 минут</p>
+        <label><input type="tel" placeholder="Номер телефона*" pattern="[0-9]*" minlength="5" maxlength="40" required></label>
+        <button class="button button--red" type="submit">Заказать звонок</button>
+        </form>
+    </div>
+    <div class="modal__overlay modal__overlay--question"></div>
+  </section>
+  
   <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 
 </html>

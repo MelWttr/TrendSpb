@@ -2,6 +2,7 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "global.scss";
+@import "blocks/animations.scss";
 @import "blocks/wrapper.scss";
 @import "blocks/title.scss";
 @import "blocks/button.scss";
@@ -23,4 +24,6 @@
 @import "blocks/contacts.scss";
 @import "blocks/footer.scss";
 @import "blocks/form.scss";
-
+@import "blocks/popup.scss";
+@import "blocks/modal.scss";
+@import "blocks/hidden.scss";

@@ -131,7 +131,10 @@
     justify-content: flex-start;
   }
 
-  .navigation__list {
+  .navigation__list,
+  .navigation--opened .navigation__list,
+  .navigation--nojs .navigation__list
+  {
     padding-top: 0; 
     display: flex;
     flex-direction: row;
@@ -141,7 +144,8 @@
     margin-left: 40px;
   }
 
-  .navigation__item {
+  .navigation__item,
+  .navigation--opened .navigation__item {
     margin-right: 10px;
     padding-top: 10px;
     width: auto;
