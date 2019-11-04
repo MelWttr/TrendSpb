@@ -764,7 +764,8 @@ form .button {
     width: 100%;
     min-height: 30px; }
   .navigation--opened .navigation__toggle {
-    position: relative; }
+    position: relative;
+    background-image: none; }
   .navigation--opened .navigation__toggle::before {
     content: "";
     position: absolute;

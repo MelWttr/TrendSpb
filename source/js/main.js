@@ -6,7 +6,7 @@ var navToggle = document.querySelector(".navigation__toggle");
 nav.classList.remove("navigation--nojs");
 
 navToggle.addEventListener("click", function () {
-  nav.classList.toggle("navigation--closed", "navigation--opened");
+  nav.classList.toggle("navigation--closed");
   nav.classList.toggle("navigation--opened");
 });
 

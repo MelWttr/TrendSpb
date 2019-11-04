@@ -19,6 +19,7 @@
   }
   &--opened .navigation__toggle {
     position: relative;
+    background-image: none;
   }
   &--opened .navigation__toggle::before {
     @include pseudo(2px, 20px);
